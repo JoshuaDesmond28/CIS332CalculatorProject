@@ -10,10 +10,17 @@ There objective is to provide the user with quick and easy calculations tailored
 3. **Requirments**  
 
 3.1 **Functional Requirments**  
-
+Input - User must be able to input equations through both buttons and keyboard entry.
+Basic Operations - Calculator must be able to calculate at least basic calculations (add, subtract, multiply, divide), and some more advanced operations like powers, roots, and percentages.
+Financial Calculations - Must be able to perform finacial calculations for mortgage, auto loan, etc.
+Errors - Must be able to detect errors and provide feedback for them
+Clearing - User must be able to clear their current entry and full operations
 
 3.2 **Non-Functional Requirments**  
-
+Usability - Calculator should have a clear layout and design that is easy to understand and use
+Responsiveness - Calculator should be adaptive to screen sizes between both mobile and desktop
+Accuracy - Calculator must be accurate in its answers
+Performance - Must perform and calculate operations quickly and near-instantaniously
 
 4. **User Stories**  
 **As a User** I want to be able to use the calculator to calculate my autoloan insurance payment.  
