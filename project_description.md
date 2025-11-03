@@ -16,7 +16,10 @@ There objective is to provide the user with quick and easy calculations tailored
 
 
 4. **User Stories**  
-
+**As a User** I want to be able to use the calculator to calculate my autoloan insurance payment.  
+**As a User** I want to be able to use the calculator to calculate my mortgage payment.  
+**As a User** I want to be able to use the calculator on my phone so I can perform quick reliable calculations.  
+**As a User** I want to be able to see the different functions of the calculator.  
 
 5.**Implementation Details**  
 
@@ -25,6 +28,11 @@ There objective is to provide the user with quick and easy calculations tailored
 
 
 5.2 **API Integration Strategy**  
-
+The goal is to use **API Ninjas** for the mortgage payments. API Ninjas provides detailed mortgage payment information as well as calculate monthly payments, anual payments or interest. We will also use **CalcX** for the autoloan payments. Calcx via github/rapidAPI will be used to return the numbers for our complex buttons and work perfectly with the GUI.
 
 6. **Deliverables**
+Successful completion of the Financial Calculator will result in the following deliverabilities.  
+1. **Fully Functional Web Application:**  A responsive web application that works both on desktop and mobile devices to provide quick and easy calculations as well as mortage payments, auto loan insurance and other calculations tailored towards the users needs.  
+2. **Source Code:**  Clean and well documented source code. It will be organized for the frotend application.  
+3. **Project Documentation:**  The project description and the project markdown file will provide detailed instructions for setup and instalation.  
+4. **UI Mockups/Design:**  Simple wireframes and design concepts will be created to illustrate the final look and feel for the calculator application.
