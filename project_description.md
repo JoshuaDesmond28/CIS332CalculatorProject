@@ -33,6 +33,10 @@ Performance - Must perform and calculate operations quickly and near-instantanio
 
 5.1 **Technical Stack (Proposed)**  
 
+| **Component** | **Technology** | **Rationale** |
+| Frontend Framework| HTML, JS, APIS| Modern framework to get inputs in a calculator|
+|Styling| CSS| Fast framework for rapid responsive design|
+|Deployment| Reliable server hosted platform.|
 
 5.2 **API Integration Strategy**  
 The goal is to use **API Ninjas** for the mortgage payments. API Ninjas provides detailed mortgage payment information as well as calculate monthly payments, anual payments or interest. We will also use **CalcX** for the autoloan payments. Calcx via github/rapidAPI will be used to return the numbers for our complex buttons and work perfectly with the GUI.
