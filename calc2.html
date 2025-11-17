@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Calculator</title>
+</head>
+<body>
+  <div class="mortgage-calculator">
+    <h1>Mortgage Calculator</h1>
+    <form id="mortgage-form">
+      <div class="form-group">
+        <label for="loan-amount">Loan Amount ($):</label>
+        <input type="number" id="loan-amount" name="loanAmount" required />
+      </div>
+
+      <div class="form-group">
+        <label for="interest-rate">Annual Interest Rate (%):</label>
+        <input type="number" step="0.01" id="interest-rate" name="interestRate" required />
+      </div>
+
+      <div class="form-group">
+        <label for="loan-term">Loan Term (years):</label>
+        <input type="number" id="loan-term" name="loanTerm" required />
+      </div>
+
+      <!-- Optional fields -->
+      <div class="form-group">
+        <label for="property-tax">Property Tax (annual $):</label>
+        <input type="number" id="property-tax" name="propertyTax" />
+      </div>
+
+      <div class="form-group">
+        <label for="insurance">Insurance (annual $):</label>
+        <input type="number" id="insurance" name="insurance" />
+      </div>
+
+      <div class="form-group">
+        <label for="other-costs">Other Costs (annual $):</label>
+        <input type="number" id="other-costs" name="otherCosts" />
+      </div>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div class="results">
+      <h2>Results</h2>
+      <p>Monthly Principal & Interest: <span id="monthly-pi">-</span></p>
+      <p>Monthly Property Tax: <span id="monthly-tax">-</span></p>
+      <p>Monthly Insurance: <span id="monthly-insurance">-</span></p>
+      <p>Monthly Other Costs: <span id="monthly-other">-</span></p>
+      <p><strong>Total Monthly Payment: <span id="monthly-total">-</span></strong></p>
+      <p>Total Payment Over Life: <span id="total-payment">-</span></p>
+      <p>Total Interest Paid: <span id="total-interest">-</span></p>
+    </div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
