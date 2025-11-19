@@ -1,92 +1,140 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5fa;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
+.mortgage-calculator {
+  background: #ffffff;
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 24px 28px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
 
-.calculator {
+.mortgage-calculator h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+.mortgage-calculator h2 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #000000;
+  border-bottom: 2px solid #e0e5f0;
+  padding-bottom: 4px;
+}
+
+#mortgage-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
-  width: 300px;
 }
 
-
-.display {
-  height: 60px;
-  text-align: right;
-  font-size: 2em;
-  padding: 10px;
-  border: 1px solid #000;
-  background: #fff;
-  margin-bottom: 10px;
-  overflow: hidden;
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #000000;
 }
 
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+.form-group input[type="number"] {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #c5ccdd;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: #4c7fff;
+  box-shadow: 0 0 0 2px rgba(76, 127, 255, 0.2);
+}
 
-button {
-  font-size: 1.1em;
-  padding: 15px;
-  border: 1px solid #000;
-  background: #e7e7e7;
+#mortgage-form button[type="submit"] {
+  grid-column: 1 / -1; /* full width across both columns */
+  margin-top: 8px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background: #4c7fff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
 }
 
-button:hover {
-  background: #d0d0d0;
+#mortgage-form button[type="submit"]:hover {
+  background: #3b67d8;
+  box-shadow: 0 4px 10px rgba(76, 127, 255, 0.35);
 }
 
-
-.operator {
-  background: #ffd66b;
-}
-
-.operator:hover {
-  background: #e6c159;
-}
-
-.clear {
-  background: #ff7b7b;
-}
-
-.clear:hover {
-  background: #e06868;
-}
-
-.equals {
-  background: #8ad48a;
-}
-
-.equals:hover {
-  background: #76bd76;
+#mortgage-form button[type="submit"]:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 
-.equals {
-  grid-column: span 2;
+.results {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e5f0;
+  font-size: 0.95rem;
+  color: #2e3745;
 }
 
-.clear {
-  grid-column: span 2;
+.results p {
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-#insurance {
-    grid-column: span 2;
+.results span {
+  font-weight: 600;
 }
 
-#auto-loan {
-    grid-column: span 2;
+.results p strong {
+  font-size: 1.02rem;
+}
+
+
+@media (max-width: 600px) {
+  .mortgage-calculator {
+    margin: 20px auto;
+    padding: 18px 16px;
+  }
+
+  #mortgage-form {
+    grid-template-columns: 1fr;
+  }
+
+  #mortgage-form button[type="submit"] {
+    width: 100%;
+  }
+
+  .results p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
